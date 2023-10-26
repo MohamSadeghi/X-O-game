@@ -1,0 +1,139 @@
+body{
+margin: 0px;
+background-color: rgb(60, 61, 61);
+}
+
+#maincell{
+width: 345.5;
+height: 315;
+background-color: rgb(60, 61, 61);
+border:red 2px solid;
+margin: 50px auto 50px;
+}
+
+#one{
+width:79px;
+height:79px;
+border:red 0px solid;
+float:left;
+padding-left: 35px;
+padding-top: 25px;
+border-bottom-width: 2px;
+border-right-width: 2px;
+}
+#two{
+width:79px;
+height: 79px;
+border:red 0px solid;
+border-bottom-width: 2px;
+border-right-width: 2px;
+float:left;
+padding-left: 35px;
+padding-top: 25px;
+}
+#three{
+    width:79px;
+    height: 79px;
+    border:red 0px solid;
+    border-bottom-width: 2px;
+    float:left;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+#four{
+    width: 79px;
+    height: 79px;
+    border: red 0px solid;
+    float:left;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+
+#five{
+    width: 79px;
+    height: 79px;
+    border: red 0px solid;
+    float:left;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+
+#six{
+    width: 79px;
+    height: 79px;
+    border: red 0px solid;
+    float:left;
+    border-bottom-width: 2px;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+
+#seven{
+    width: 79px;
+    height: 79px;
+    border: red 0px solid;
+    float:left;
+    border-right-width: 2px;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+
+#eight{
+    width: 79px;
+    height: 79px;
+    border: red 0px solid;
+    float:left;
+    border-right-width: 2px;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+
+#nine{
+    width: 79px;
+    height: 79px;
+    border: red 0px solid;
+    float:left;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+
+div{
+    color: red;
+    font-size: 60px;
+    font-style: bold;
+}
+#result{
+    width: 140px;
+    height: 50px;
+    background-color: aqua;
+    color:rgb(60, 61, 61);
+    display: none;
+    font-size: 20px;
+    font-style: initial;
+    float: left;
+    margin-left:45%;
+    border:rgb(0, 116, 4) dashed 10px;
+    border-radius: 60%;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+#information{
+    width: 600px;
+    height: 120px;
+    font-size: 20px;
+    color: yellow;
+    font-style: oblique;
+    padding-top: 10px;
+}
+#btn{
+    margin-left: 470px;
+    cursor: pointer;
+}
+span{
+    font-style: normal;
+    color: white;
+}

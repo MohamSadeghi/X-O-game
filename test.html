@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="template.css"/>
+        <script type="text/javascript">
+            var turn = 1
+            var patt = /[A-Z]/
+            var nameone = "none1"
+            var nametwo = "none2"
+
+            function get(btn){
+                nameone = document.getElementById("name_x").value
+                nametwo = document.getElementById("name_o").value
+
+                btn.value = "Saved!"
+            }
+
+
+            function change(cell){
+               cell.style.cursor = "pointer";
+               cell.style.backgroundColor = "orange";
+
+            }
+
+            function reback(cell){
+               cell.style.cursor = "pointer";
+               cell.style.backgroundColor = "rgb(60,61,61)";
+
+            }
+
+            function endgame(){
+                
+            var ONE = document.getElementById("one").innerHTML
+            var TWO = document.getElementById("two").innerHTML
+            var THREE = document.getElementById("three").innerHTML
+            var FOUR = document.getElementById("four").innerHTML
+            var FIVE = document.getElementById("five").innerHTML
+            var SIX = document.getElementById("six").innerHTML
+            var SEVEN = document.getElementById("seven").innerHTML
+            var EIGHT = document.getElementById("eight").innerHTML
+            var NINE = document.getElementById("nine").innerHTML 
+
+            var is_end = ((ONE==TWO)&&(TWO==THREE)&& patt.test(ONE) && patt.test(TWO) && patt.test(THREE))
+                      ||((FOUR==FIVE)&&(FIVE==SIX)&& patt.test(FOUR) && patt.test(FIVE) && patt.test(SIX))
+                      ||((SEVEN==EIGHT)&&(EIGHT==NINE)&&patt.test(SEVEN) && patt.test(EIGHT) && patt.test(NINE))
+                      ||((ONE==FOUR)&& (FOUR==SEVEN) && patt.test(ONE) && patt.test(FOUR) && patt.test(SEVEN))
+                      ||((TWO==FIVE)&&(FIVE==EIGHT) && patt.test(TWO) && patt.test(FIVE) && patt.test(EIGHT))
+                      ||((THREE==SIX)&&(SIX==NINE)&&patt.test(THREE) && patt.test(SIX) && patt.test(NINE))
+                      ||((ONE==FIVE)&&(FIVE==NINE)&& patt.test(ONE) && patt.test(FIVE) && patt.test(NINE))
+                      ||((THREE==FIVE)&&(FIVE==SEVEN)&&patt.test(THREE) && patt.test(FIVE) && patt.test(SEVEN))
+
+            var is_draw = patt.test(ONE)&&patt.test(TWO)&&patt.test(THREE)&&patt.test(FOUR)&&patt.test(FIVE)&&patt.test(SIX)&&patt.test(SEVEN)&&patt.test(EIGHT)&&patt.test(NINE)
+
+
+                if(is_end){
+                    if(!turn){
+                        var box = document.getElementById("result")
+                        box.innerHTML = nameone + "  win"
+                        box.style.display = "inline"
+
+                    }
+                    else{
+                        var box = document.getElementById("result")
+                        box.innerHTML = nametwo + "  win"
+                        box.style.display = "inline"
+                    }
+                }
+                if(!is_end && is_draw){
+                        var box = document.getElementById("result")
+                        box.innerHTML = "game end draw"
+                        box.style.display = "inline"
+                }
+            }
+
+            function showin(cell){
+                if(turn){
+                    cell.innerHTML = "X"
+                    turn = 0
+                }
+                else{
+                    cell.innerHTML = "O"
+                    turn = 1;
+                }
+                endgame()
+            }
+        </script>
+    </head>
+    <body onload="endgame()">
+        <div id="information">
+            X-Player name:    <input type="txt" id="name_x"><br/><br/>
+            O-Player name:   <input type="txt" id="name_o"><br/><br/>
+            <span>Click to insure that your information saved successfully</span><input type="button" value="Save" id="btn" onclick="get(this)">
+        </div>
+        <hr/>
+        <div id="maincell">
+            <div id="one" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+            <div id="two" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+            <div id="three" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+            <div id="four" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+            <div id="five" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+            <div id="six" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+            <div id="seven" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+            <div id="eight" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+            <div id="nine" onmouseover="change(this)" onmouseout="reback(this)" onclick="showin(this)">
+            </div>
+        </div>
+        <hr/>
+        <br/>
+        <br/>
+         <div id="result">
+         </div>
+    </body>
+</html>
