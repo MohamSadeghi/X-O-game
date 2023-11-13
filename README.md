@@ -1,6 +1,6 @@
 <head>
 <style>
-  h{
+  h1{
     color:blue;
   }
 </style>
