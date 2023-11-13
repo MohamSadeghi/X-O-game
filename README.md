@@ -1,9 +1,2 @@
-<head>
-<style>
-  h1{
-    color:blue;
-  }
-</style>
-</head>
-<h1 "style='color:blue'">X/O Puzzle</h1>
+<h1>X/O Puzzle</h1>
 <p>a simple x/o game implimented by html tags and designed by CSS code</p>
